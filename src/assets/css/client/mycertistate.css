@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+/* 핵심역량 현황 조회 */
+.corestate_search{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+}
+.corestate_search::before{
+  position: absolute; top: 50%; left: 335px;
+  content: '';
+  width: 1px; height: 45px;
+  background: var(--light2);
+  transform: translateY(-50%);
+}
+.corestate_search .radio_tab_wrap{
+  margin-bottom: 0;
+}
+.corestate_search .radio_row{
+  margin: 2px 32px 2px 0;
+}
+.corestate_search .radio_row:last-of-type{
+  margin: 2px 0 2px 0;
+}
+.corestate_search .sbjt_radio{
+  width: 24%;
+}
+.corestate_search .term_radio{
+  position: relative;
+  width: 67%;
+  padding-left: 50px;
+}
+.corestate_search .search_daywrap{
+  margin-left: 16px;
+}
+.corestate_search .btn_area{
+  margin: 0;
+}
+.mycerti_chart{
+  padding: 40px 60px;
+}
+.mycerti_chart .bar_chart .apexcharts-datalabel {
+  fill: #585D72;
+}
+
+/* 전공능력 현황 조회 */
+.majorstate_search{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+}
+.majorstate_search .radio_tab_wrap{
+  margin-bottom: 0;
+}
+.majorstate_search .radio_row{
+  margin: 2px 32px 2px 0;
+}
+.majorstate_search .radio_row:last-of-type{
+  margin: 2px 0 2px 0;
+}
+.majorstate_search .search_daywrap{
+  margin: 0 32px 0 16px;
+}
+.majorstate_search .btn_area{
+  margin: 0;
+}
+.hg_40{
+  height: 40px;
+}
+.major_score{
+  padding: 40px 74px;
+}
+.major_desc{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.major_desc > div{
+  padding: 24px 32px;
+  min-height: 240px;
+  background: var(--white);
+  border-radius: 14px;
+}
+.major_desc > div strong{
+  position: relative;
+  display: block;
+  padding-left: 54px;
+  height: 42px;
+  color: var(--black); font-size: 1.8rem; font-weight: 600; line-height: 42px;
+}
+.major_desc > div strong::before{
+  position: absolute; top: 0; left: 0;
+  width: 42px; height: 42px;
+  content: '';
+  background-image: url(/src/assets/images/mycertistate/majorState_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.major_desc > div:nth-child(1) strong::before{
+  background-color: #FFCFCF;
+}
+.major_desc > div:nth-child(2) strong::before{
+  background-color: #EAD9FF;
+}
+.major_desc > div:nth-child(3) strong::before{
+  background-color: #FFF0BE;
+}
+.major_desc > div:nth-child(4) strong::before{
+  background-color: #ECFAD4;
+}
+.major_desc > div p{
+  margin-top: 27px;
+  color: var(--black); font-size: 1.6rem; line-height: 2.4rem;
+}
+
+/* 나의 전공능력 정의 */
+
+.major_detail_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.major_detail_wrapper .major_section {
+  display: flex;
+  gap: 24px;
+}
+.major_section .title {
+  padding: 32px;
+  width: 276px; height: 226px;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+
+.major_section .title p {
+  font-size: 2.2rem; font-weight: 600; line-height: 3rem;
+  word-break: keep-all;
+}
+.major_section .title.color01 {
+  background-color: #FFEBD1;
+}
+.major_section .title.color02 {
+  background-color: #DCF2FE;
+}
+.major_section .title.color03 {
+  background-color: #ECFCD3;
+}
+.major_section .title.color04 {
+  background-color: #FEDFE3;
+}
+.major_section .title.color05 {
+  background-color: #D6E6FF;
+}
+.major_section .title.color06 {
+  background-color: #C6F1E7;
+}
+.major_section .title.color07 {
+  background-color: #EBE1FE;
+}
+.major_section .title.color08 {
+  background-color: #DCF2FE;
+}
+.major_section .cnt {
+  display: flex;
+  flex-direction: column; justify-content: space-between;
+  padding: 32px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+}
+.major_section .cnt .info {
+  margin-bottom: 24px;
+  font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;
+}
+.major_section .cnt .major_list li {
+  margin-bottom: 8px;
+  font-size: 1.4rem; font-weight: 500; line-height: 2.2rem;
+}
+.major_section .cnt .major_list li:last-child {
+  margin-bottom: 0;
+}
+.major_section .cnt .major_list li span {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.6rem; font-weight: 600; color: var(--dark3); vertical-align: 0;
+}
+
+
+
+
+@media screen and (max-width: 1280px) {
+  /* 핵심역량 현황 조회 */
+  .corestate_search{
+    flex-flow: wrap;
+  }
+  .corestate_search::before{
+    display: none;
+  }
+  .corestate_search .sbjt_radio{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--light2);
+  }
+  .corestate_search .term_radio{
+    padding: 0;
+    width: 85%;
+  }
+  .corestate_search .btn_area{
+    width: 15%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* 핵심역량 현황 조회 */
+  .corestate_search{
+    padding: 24px;
+  }
+  .mycerti_chart{
+    padding: 24px;
+  }
+  /* 전공능력 현황 조회 */
+  .majorstate_search{
+    padding: 24px;
+    flex-flow: wrap;
+  }
+  .major_desc{
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .major_desc > div{
+    min-height: 200px;
+  }
+  .major_score{
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 910px) {
+  /* 핵심역량 현황 조회 */
+  .corestate_search .search_daywrap{
+    margin: 10px 0;
+  }
+  .corestate_search .radio_row:last-of-type{
+    margin: 2px 90px 2px 0;
+  }
+  /* 전공능력 현황 조회 */
+  .majorstate_search .radio_tab_wrap{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .majorstate_search .search_daywrap{
+    margin: 0 32px 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* 핵심역량 현황 조회 */
+  .corestate_search{
+    padding: 24px 16px;
+  }
+  .corestate_search .radio_tab_wrap{
+    justify-content: center;
+  }
+  .corestate_search .sbjt_radio{
+    padding-bottom: 10px;
+  }
+  .corestate_search .term_radio{
+    width: 100%;
+  }
+  .corestate_search .radio_row{
+    margin: 2px 10px 2px 0;
+  }
+  .corestate_search .radio_row:last-of-type{
+    margin: 2px 10px 2px 0;
+  }
+  .corestate_search .search_daywrap{
+    display: block !important;
+    margin: 0;
+    width: 100%;
+  }
+  .corestate_search .wd_220{
+    margin-top: 10px;
+    width: 100% !important;
+  }
+  .corestate_search .input_tilde{
+    display: none;
+  }
+  .corestate_search .btn_area{
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .mycerti_chart{
+    padding: 24px 16px;
+  }
+  /* 전공능력 현황 조회 */
+  .majorstate_search{
+    padding: 24px 16px;
+  }
+  .majorstate_search .radio_tab_wrap{
+    margin-bottom: 0;
+    justify-content: center;
+  }
+  .majorstate_search .search_daywrap{
+    display: block !important;
+    margin: 0;
+    width: 100%;
+  }
+  .majorstate_search .wd_220{
+    margin-top: 10px;
+    width: 100% !important;
+  }
+  .majorstate_search .input_tilde{
+    display: none;
+  }
+  .majorstate_search .btn_area{
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .major_desc{
+    grid-template-columns: repeat(1, 4fr)
+  }
+  .m_hg_auto{
+    height: auto;
+  }
+  .m_title_function{
+    position: relative;
+    right: auto; top: auto;
+    transform: inherit;
+    justify-content: flex-end;
+  }
+  .major_detail_wrapper .major_section {
+    display: block;
+  }
+  .major_section .title {
+    margin-bottom: 8px;
+    padding: 24px;
+    width: auto; height: auto;
+  }
+  .major_section .title p {
+    font-size: 2rem; line-height: 2.6rem;
+  }
+  .major_section .cnt {
+    display: block;
+    padding: 24px;
+  }
+  .major_section .cnt .info {
+    margin-bottom: 16px;
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  .major_section .title {
+    padding: 16px 24px;
+  }
+  .major_section .cnt .info {
+    font-size: 1.5rem; line-height: 2.2rem;
+  }
+}

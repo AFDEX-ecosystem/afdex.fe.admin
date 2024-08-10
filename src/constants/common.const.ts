@@ -1,0 +1,12 @@
+export const ACCESS_TOKEN = ''
+export const USER_INFO = 'user_info'
+export const COLOR = ['#ff8365', '#86ff00','#003aff', '#ffdf00','#E91E63']
+export const SITE_CLIENT = 'c'
+export const STATUS_YES = "Y"
+export const STATUS_NO = "N"
+export const STATUS_0 = "0"
+export const STATUS_1 = "1"
+export const LANGUAGE_KOREA_CODE = "KO"
+export const LANGUAGE_CHINA_CODE = "CH"
+export const LANGUAGE_ENGLISH_CODE = "EN"
+export const MESSAGE_ERROR_API = "API 호출 시 오류가 있습니다"

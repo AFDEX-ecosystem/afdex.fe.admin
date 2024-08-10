@@ -1,0 +1,123 @@
+{
+  "hello": "hello",
+  "common": {
+    "select" : "선택",
+    "all" : "전체",
+    "save": "저장",
+    "list": "목록",
+    "go_edit": "수정하기",
+    "edit": "수정",
+    "delete": "작제",
+    "deleteItem": "삭제",
+    "next" : "다음",
+    "cancel" : "취소",
+    "home": "HOME",
+    "search": "조회",
+    "reset": "초기화",
+    "close" : "닫기",
+    "add" : "추가",
+    "confirm" : "확인",
+    "startDate" : "시작일",
+    "endDate" : "종료일",
+    "title" : {
+      "search" : "검색",
+      "list": "목록"
+    },
+    "message" : {
+      "save" : "저장하시겠어요",
+      "deleteSuccess" : "삭제됐습니다",
+      "deleteFileSuccess": "삭제 되었습니다.",
+      "confirmDowloadExcel": "",
+      "copyUrl":"URL이 복사됐습니다.",
+      "confirmDelete": "삭제 하시겠습니까?"
+    },
+    "use": "사용",
+    "noUse": "미사용",
+    "show": "게시",
+    "noShow": "비게시",
+    "languageKr": "한국어",
+    "languageCh": "중국어",
+    "languageEn": "영어",
+    "multiLanguage": "다국어",
+    "saveTemp": "임시저장",
+    "rowNum": "번호",
+    "print": "인쇄",
+    "dowloadPng": "PNG 다운로드",
+    "dowloadJpg": "JPG 다운로드",
+    "copyUrlLabel": "URL 복사하기",
+    "btnCopyUrl": "URL 복사",
+    "messageCheckDate": "종료일은 시작일보다 빠를 수 없습니다.",
+    "messageValidateRequired": "필수입력항목은 모두 입력해주세요."
+  },
+  "portfolio": {
+    "pageTitle": "포트폴리오",
+    "status": "공개",
+    "personalInformation": {
+      "title": "인적사항",
+      "name": "이름",
+      "birthday": "생년월일",
+      "sex": "성별",
+      "phone": "핸드폰",
+      "email": "이메일",
+      "address": "주소"
+    },
+    "noData": "등록 내역이 없습니다.",
+    "studyInformation": {
+      "highSchool": "출신고등학교",
+      "admissionClassification": "입학구분",
+      "studentCode": "학번",
+      "startDate": "입학일자",
+      "nationality": "내국인/외국인",
+      "majorUniversity": "단과대학",
+      "subject": "학과",
+      "addImage": "프로필 사진 추가"
+    },
+    "creditsCompleted": {
+      "title": "이수학점",
+      "card_1": "전공필수",
+      "card_2": "전공선택",
+      "card_3": "교양",
+      "card_4": "평점",
+      "card_5": "전체"
+    },
+    "coreCompetencies": {
+      "title": "와이즈 핵심역량 인증",
+      "card_1": "최우수 인재",
+      "card_2": "올해의 우수인재",
+      "card_3": "와이즈 인재",
+      "card_4": "역량별 우수인재 (지혜로움)",
+      "card_5": "역량별 우수인재 (공감)",
+      "card_6": "역량별 우수인재 (자기주도)",
+      "card_7": "역량별 우수인재 (융합실무)"
+    },
+    "languages": "외국어",
+    "certificate": "자격증",
+    "prizes": "수상내역",
+    "charityActivities": "봉사활동",
+    "inter": "인턴경험",
+    "expAbroad": "해외경험",
+    "selfIntroduction":{
+      "title": "자기소개서",
+      "note": "※ 대표 자기소개서를 선정해주세요.",
+      "tb_col1": "대표 여부",
+      "tb_col2": "자기소개서 제목",
+      "tb_col3": "작성일"
+    },
+    "army": {
+      "title": "병역사항",
+      "tb_row1": "병역구분",
+      "tb_row2": "군벌",
+      "tb_row3": "입대일",
+      "tb_row4": "전역일"
+    },
+    "file": {
+      "title": "포트폴리오 파일"
+    },
+    "button": {
+      "preview": "미리보기",
+      "share": "공유하기",
+      "save": "저장",
+      "register": "등록"
+    }
+  }
+}

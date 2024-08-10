@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+p, span, h1, h2, h3, h4, h5, h6, div, a, li, ul, ol, table, th, td, caption, blockquote, pre, code, input, button, label, select, option, textarea {
+  letter-spacing: 0.03rem;
+}
+
+/* portfolio */
+.portfolio_title {
+  margin-top: 3.125rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio_title > div:first-child > h2,
+.portfolio_title > h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  text-align: left;
+}
+.portfolio_title > div:first-child,
+.portfolio_title > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.portfolio_cart{
+  background: var(--bg--color1);
+  padding: 1rem 1.5rem 2.25rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  gap:1.5rem;
+  height: 100%;
+}
+.portfolio_cart > p:first-child {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+.portfolio_cart > p:first-child.break_work {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  max-width: 100px;
+  word-break: break-word;
+  text-align: center;
+}
+
+.portfolio_cart > p:last-child {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #818387;
+}
+.portfolio_col_custom {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.portfolio_col_custom > div:first-child{
+  flex: 4;
+}
+.portfolio_col_custom > div:last-child{
+  flex: 1;
+  margin-bottom: 1rem;
+}
+.portfolio_cart_group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.portfolio_cart.portfolio_cart_icon {
+  display: flex;
+  align-items:center !important;
+  justify-content: space-between;
+  padding: 1.5rem 2.875rem;
+  position: relative;
+}
+.portfolio_cart.portfolio_cart_icon > div:not(.icon) {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  border: 10px solid #D9D9D9;
+  display: grid;
+  place-items: center;
+}
+.portfolio_cart.portfolio_cart_icon > span {
+  word-break: break-word;
+}
+.portfolio_cart_default{
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.715rem;
+  text-align: center;
+  color: #747474;
+}
+.portfolio_cart.portfolio_cart_icon > div.icon {
+  position: absolute;
+  right: 0.875rem;
+  top: 0.75rem;
+}
+
+.button_group_floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

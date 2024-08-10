@@ -1,0 +1,49 @@
+@import 'sweetalert2/src/variables';
+body.swal2-shown.swal2-height-auto{
+  padding: 0 !important;
+}
+
+.swal2-container.swal2-center.swal2-backdrop-show {
+  padding: 0 !important;
+}
+.swal2-popup.swal2-modal.swal2-show {
+  max-width: 310px !important;
+  box-shadow: 0 0 39px 0 rgba(0, 0, 0, 0.35) !important;
+  border-radius: 10px;
+}
+.swal2-styled.swal2-confirm{
+  background-color: #ff3737 !important;
+}
+.swal2-html-container {
+  text-align: left !important;
+  color: #000 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+.swal2-actions{
+  padding: 1em 1.6em 0.3em !important;
+  justify-content: flex-end !important;
+}
+.swal2-confirm.swal2-styled{
+  background: #747474 !important;
+  border: 1px solid #747474 !important;
+  border-radius: 6px !important;
+  padding: 4px 16px !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: #fff !important;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.swal2-cancel.swal2-styled{
+  background: #fff !important;
+  border: 1px solid #000 !important;
+  border-radius: 6px !important;
+  padding: 4px 16px !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: #000 !important;
+  margin: 0 !important;
+}
+@import 'sweetalert2/src/sweetalert2';

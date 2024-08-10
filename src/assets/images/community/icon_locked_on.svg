@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="그룹_220325" data-name="그룹 220325" transform="translate(-469 -366)">
+    <g id="그룹_220322" data-name="그룹 220322" transform="translate(-160 80)">
+      <g id="그룹_220321" data-name="그룹 220321" transform="translate(-5 -1.182)">
+        <rect id="사각형_121303" data-name="사각형 121303" width="14" height="11.706" transform="translate(637 294.476)" fill="none"/>
+        <path id="패스_61889" data-name="패스 61889" d="M.963,0h11.56a.978.978,0,0,1,.963.992v9.918a.978.978,0,0,1-.963.992H.963A.978.978,0,0,1,0,10.909V.992A.978.978,0,0,1,.963,0Z" transform="translate(637.482 293.944)" fill="none" stroke="#f15922" stroke-width="1"/>
+        <path id="패스_61885" data-name="패스 61885" d="M12.63,18.62a1.3,1.3,0,1,1-1.3-1.341,1.322,1.322,0,0,1,1.3,1.341" transform="translate(632.756 280.612)" fill="none"/>
+        <line id="선_5265" data-name="선 5265" y2="3.057" transform="translate(643.743 300.512)" fill="#fff"/>
+        <g id="그룹_220320" data-name="그룹 220320" transform="translate(642.723 296.882)">
+          <path id="패스_61886" data-name="패스 61886" d="M13.024,18.779a1.5,1.5,0,1,1-1.5-1.5A1.5,1.5,0,0,1,13.024,18.779Z" transform="translate(-10.024 -17.279)" fill="none" stroke="#f15922" stroke-linejoin="bevel" stroke-width="1"/>
+          <line id="선_5266" data-name="선 5266" y2="3" transform="translate(1.5 3)" fill="none" stroke="#f15922" stroke-linejoin="bevel" stroke-width="1"/>
+        </g>
+        <path id="패스_61887" data-name="패스 61887" d="M13.39,8.226H5.738V3.246a2.4,2.4,0,0,1,2.3-2.5h3.05a2.4,2.4,0,0,1,2.3,2.5Z" transform="translate(634.152 286.432)" fill="none"/>
+        <path id="패스_61888" data-name="패스 61888" d="M11.518,5.709H5.738v-3.3A1.7,1.7,0,0,1,7.476.75h2.3a1.7,1.7,0,0,1,1.738,1.655Z" transform="translate(635.597 288.235)" fill="none" stroke="#f15922" stroke-linejoin="bevel" stroke-width="1"/>
+      </g>
+      <rect id="사각형_121304" data-name="사각형 121304" width="20" height="20" transform="translate(629 286)" fill="none"/>
+    </g>
+  </g>
+</svg>

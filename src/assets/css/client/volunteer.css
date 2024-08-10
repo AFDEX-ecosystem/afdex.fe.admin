@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/* 학생 사회봉사 신청 */
+
+.volntr_search .table_search {
+  display: grid;
+  grid-template-columns: 16% 32% 16% auto;
+  border-top: 1px solid var(--light1);
+}
+.volntr_search .table_search > div {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  color: var(--dark1);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: left;
+  border-bottom: 1px solid var(--light1);
+}
+.volntr_search .cate_name {
+  background: rgba(237, 239, 242, 0.4);
+}
+.volntr_search .check_row,
+.volntr_search .radio_row {
+  /* margin: 2px 20px 2px 0; */
+  margin: 2px 0;
+}
+.volntr_search .table_input_row {
+  display: flex;
+  flex-flow: wrap;
+  gap: 5px 20px;
+}
+.volntr_search .search_daywrap > div {
+  width: calc(100% - 20px);
+}
+
+.volntr_srch_list .tbl_date_row span {
+  position: relative;
+  display: block;
+  font-weight: 500;
+}
+.volntr_srch_list .tbl_date_row span:first-of-type::after {
+  content: "~";
+  margin-left: 5px;
+}
+.volntr_srch_list .tbl_date_row span:last-of-type {
+  padding-right: 12px;
+}
+
+/* 사회봉사 승인 신청 */
+.volntr_appr_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.volntr_appr_viewbox {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  overflow: hidden;
+}
+.volntr_appr_viewbox .volntr_btn {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100px; height: 100px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.volntr_appr_viewbox .volntr_btn span{
+  font-size: 1.4rem; font-weight: 500;
+}
+.volntr_appr_viewbox .volntr_btn span::before {
+  content: "";
+  display: block;
+  margin: 0 auto 10px;
+  width: 42px; height: 42px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.volntr_appr_viewbox .volntr_btn.approved{
+  background: #FFEBE3;
+}
+.volntr_appr_viewbox .volntr_btn.approved span{
+  color: var(--primary);
+}
+.volntr_appr_viewbox .volntr_btn.approved span::before{
+  background-image: url(/src/assets/images/volunteer/icon_approved.png);
+}
+.volntr_appr_viewbox .volntr_btn.pending{
+  background: rgba(214, 219, 226, 0.6);
+}
+.volntr_appr_viewbox .volntr_btn.pending span{
+  color: var(--dark3);
+}
+.volntr_appr_viewbox .volntr_btn.pending span::before{
+  background-image: url(/src/assets/images/volunteer/icon_pending.png);
+}
+.volntr_appr_viewbox .volntr_btn.rejected{
+  background: rgba(214, 219, 226, 0.6);
+}
+.volntr_appr_viewbox .volntr_btn.rejected span{
+  color: var(--dark3);
+}
+.volntr_appr_viewbox .volntr_btn.rejected span::before{
+  background-image: url(/src/assets/images/volunteer/icon_rejected.png);
+}
+.volntr_appr_viewbox .cont {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.volntr_appr_viewbox .cont strong{
+  color: var(--dark1); font-size: 1.8rem; font-weight: 600; line-height: 2.6rem;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.volntr_appr_viewbox .cont p{
+  margin-top: 8px;
+  color: var(--dark1); font-size: 1.4rem; font-weight: 500; line-height: 2rem;
+}
+.volntr_appr_viewbox .cont p span{
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  width: 65px;
+  color: var(--dark3); font-weight: 500;
+}
+.volntr_appr_viewbox .cont p span::before{
+  position: absolute; top: 52%; right: 0;
+  content: '';
+  width: 1px; height: 12px;
+  background: var(--light3);
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1225px) {
+  /* 학생 사회봉사 신청 */
+  .volntr_search .tbl_row table tbody td {
+    padding: 8px 13px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  /* 학생 사회봉사 신청 */
+  .volntr_search .tbl_row table tbody td {
+    padding: 8px 13px;
+  }
+  .volntr_search .table_input_row {
+    display: grid;
+  }
+  .volntr_search .table_input_row.check_row_wrap {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .volntr_search .table_input_row.radio_row_wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* 사회봉사 승인 신청 */
+  .volntr_appr_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 910px) {
+  .volntr_search .table_search {
+    grid-template-columns: 20% auto;
+    word-break: keep-all;
+  }
+  .volntr_search .table_input_row.check_row_wrap {
+    gap: 5px 60px;
+  }
+  .volntr_search .search_daywrap {
+    display: block !important;
+  }
+  .volntr_search .search_daywrap > div {
+    width: 100%;
+  }
+  .volntr_search .search_daywrap > div:first-child {
+    margin-bottom: 10px;
+  }
+  .volntr_search .input_tilde {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* 사회봉사 승인 신청 */
+  .volntr_appr_viewbox{
+    gap: 16px;
+    padding: 24px 16px;
+  }
+  .volntr_appr_viewbox .volntr_btn{
+    width: 75px; height: 75px;
+  }
+  .volntr_appr_viewbox .volntr_btn span::before{
+    width: 30px; height: 30px;
+  }
+  .volntr_appr_viewbox .cont p:last-child{
+    margin-top: 3px;
+  }
+  .volntr_appr_viewbox .volntr_btn span::before{
+    margin: 0 auto 5px;
+  }
+}
