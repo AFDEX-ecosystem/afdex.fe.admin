@@ -67,7 +67,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: url(@/assets/images/login/bg_login.png) no-repeat center;
+  background: url(@/assets/images/background/back.png) no-repeat center;
   background-size: cover;
 }
 .login_tip {
