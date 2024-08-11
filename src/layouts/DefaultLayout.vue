@@ -47,4 +47,9 @@ import {commonStore} from '@/stores/common';
 const store = commonStore()
 </script>
 
-<style scoped></style>
+<style>
+#main_content {
+  background-color: #ffff;
+}
+
+</style>

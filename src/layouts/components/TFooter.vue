@@ -1,7 +1,7 @@
 <template>
   <div id="footer" class="footer_wrap bg-black">
     <div class="grid_content portfolio_wrap">
-      <div class="grid grid-flow-col auto-cols-max grid-cols-3 gap-x-28">
+      <div class="grid grid-flow-col auto-cols-max grid-cols-3 gap-x-36">
         <div>
           <div class="flex justify-center">
             <img class="w-[200px]" :src="logo" alt="" />
@@ -16,12 +16,13 @@
             </div>
             <div>
               <span class="footer_info_left">Mã số thuế: </span>
-              <span> 0108839344</span>
+              <span>0108839344</span>
             </div>
             <div>
               <span class="footer_info_left">Địa chỉ: </span>
-              <span>Số 6C, Dương Khuê, Phường Mai Dịch,
-                Quận Cầu Giấy, Hà Nội</span>
+              <span
+                >Số 6C, Dương Khuê, Phường Mai Dịch, Quận Cầu Giấy, Hà Nội</span
+              >
             </div>
             <div>
               <span class="footer_info_left">Đại diện pháp luật: </span>
@@ -41,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="ml-[80px]">
           <div class="title py-6">
             <span>CHÍNH SÁCH</span>
           </div>
@@ -63,30 +64,29 @@
         </div>
         <div>
           <div class="title py-6 text-center">
-            <span>Tư vấn miễn phí</span>
+            <span>TƯ VẤN MIỄN PHÍ</span>
           </div>
-          
           <div>
-              <input
-                class="bg-white h-[46px] !rounded-full pl-6 my-2"
-                placeholder="Họ và tên"
-              />
-              <input
-                class="bg-white h-[46px] !rounded-full pl-6 my-2"
-                placeholder="Số điện thoại"
-              />
-              <input
-                class="bg-white h-[46px] !rounded-full pl-6 my-2"
-                placeholder="Chọn dịch vụ"
-              />
+            <input
+              class="bg-white h-[46px] !rounded-full pl-6 my-2"
+              placeholder="Họ và tên"
+            />
+            <input
+              class="bg-white h-[46px] !rounded-full pl-6 my-2"
+              placeholder="Số điện thoại"
+            />
+            <input
+              class="bg-white h-[46px] !rounded-full pl-6 my-2"
+              placeholder="Chọn dịch vụ"
+            />
             <div class="text-center py-6">
               <button
-              class="button btn_md bg-[--base-color-8] !rounded-full text-white mx-2"
-            >
-              Download
-            </button>
+                class="button btn_md bg-[--base-color-8] !rounded-full text-white mx-2"
+              >
+                Download
+              </button>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>

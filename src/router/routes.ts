@@ -11,19 +11,24 @@ export const routes = [
     path: '/',
     component: () => import('@/layouts/DefaultLayout.vue'),
     meta: {
-      title: 'Layout',
+      title: 'AFDEX - Nơi cung cầu giao thoa',
       // middleware: [authMiddleware],
     },
     children: [
+      // {
+      //   path: '',
+      //   name: SCREEN.home.name,
+      //   component: getView('Dashboard'),
+      //   meta: {
+      //     title: 'Home',
+      //     // middleware: [logMiddleware],
+      //   },
+      // },
       {
         path: '',
-        name: SCREEN.home.name,
-        component: getView('Dashboard'),
-        meta: {
-          title: 'Home',
-          // middleware: [logMiddleware],
-        },
-      }
+        name: 'layout',
+        component: getView('TestLayout'),
+      },
     ],
   },
   {
@@ -56,12 +61,6 @@ export const routes = [
     name: 'template',
     meta: { title: 'TemplateUi Yeongsang' },
     component: getView('TemplateUiYeongsang'),
-  },
-  {
-    path: '/layout',
-    name: 'layout',
-    meta: { title: 'TemplateUi Yeongsang' },
-    component: getView('LayoutTemplate'),
   },
   // {
   //   path: '/template-base',
