@@ -15,7 +15,7 @@
         <strong>Mật khẩu</strong>
         <input type="password" v-model="password" class="form_style wd_p100" placeholder="비밀번호를 입력하세요"/>
       </div>
-      <p class="login_error" v-if="errorMessage">아이디가 일치하지 않습니다.</p>
+      <p class="login_error" v-if="errorMessage">Tài khoản hoặc mật khẩu không đúng</p>
 
       <div class="login_btn_area">
         <button type="button" class="btn_round bg-[--base-color-1] text-white btn_xl btn_login" @click="login">Đăng nhập</button>
