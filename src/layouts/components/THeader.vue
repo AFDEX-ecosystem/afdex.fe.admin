@@ -1,157 +1,181 @@
 <template>
-  <div class="header_wrap">
-    <div class="header_top">
-      <div class="grid_content">
-        <button type="button" class="btn_menu">메뉴보기</button>
-        <h1 class="header_logo">
-          <router-link to="/">
-            <img src="@/assets/images/common/img_logo.svg" alt="영산대학교" />
-          </router-link>
-        </h1>
-        <div class="header_function">
-          <p class="login_info">와이즈유님 [2024.07.01 17:04]</p>
-          <button type="button" class="btn_logout" @click="logout">로그아웃</button>
+  <header>
+    <div
+      class="top_header h-[43px] bg-[--base-color-1] flex items-center justify-around"
+    >
+      <div class="left_header w-[90%]">
+        <div class="flex justify-between items-center mx-[60px]">
+          <div class="text-white">
+            <span class="flex items-center"> <img class="h-[18px] mr-2" :src="phongIcon"/> 032.884.3156 </span>
+          </div>
+          <div class="flex justify-around items-center">
+            <div class="icon_custom flex">
+              <img class="icon_infor h-[28px]" :src="faIcon"/>
+              <img class="icon_infor h-[28px]" :src="insIcon"/>
+              <img class="icon_infor h-[28px]" :src="tikIcon"/>
+              <img class="icon_infor h-[28px]" :src="youIcon"/>
+            </div>
+            <div class="search relative">
+              <input
+                id="input_search"
+                class="input_search pl-6"
+                placeholder="Tìm kiếm"
+              />
+              <label for="input_search" class="btn_search_input">
+                <svg
+                  enable-background="new 0 0 32 32"
+                  id="Glyph"
+                  version="1.1"
+                  viewBox="0 0 32 32"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z"
+                    id="XMLID_223_"
+                    fill="white"
+                  />
+                </svg>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="right_head">Việt nam</div>
     </div>
-    <div class="header_bottom">
-      <div class="grid_content">
-        <nav class="nav_wrap">
-          <ul id="gnbMenu" class="gnb_1depth">
-            <li><router-link to="/portfolio">포트폴리오</router-link></li>
-            <li><router-link to="/abilityDiagram">역량체계도 소개</router-link></li>
+    <div
+      class="bottom_header h-[110px] flex items-center bg-white justify-around"
+    >
+      <div class="h-[80%] flex items-center">
+        <div class="h-[80%] mr-5">
+          <img
+            class="h-[100%]"
+            src="https://vspace-media-prod-use1.s3.amazonaws.com/image/eddc6410-a027-4f05-a57d-e4f04867ecd0.jpg"
+          />
+        </div>
+        <nav>
+          <ul class="flex justify-center space-x-8">
             <li>
-              <router-link to="/diag">진단</router-link>
-              <ul class="gnb_2depth">
-                <li><router-link to="/diag/coreAbility">핵심역량진단</router-link></li>
-                <li><router-link to="/diag/majorAbility">전공능력진단</router-link></li>
-                <li><router-link to="/diag/learnAbility">학습역량진단</router-link></li>
-                <li><router-link to="/diag/basicAbility">기초학력진단</router-link></li>
-                <li><router-link to="/diag/sltTest">SLT 자기조절학습 검사</router-link></li>
-                <li><router-link to="/diag/catTest">CAT 대학적응력 검사</router-link></li>
-                <li><router-link to="/diag/satisRsch">만족도 조사</router-link></li>
-              </ul>
+              <a
+                href="#"
+                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out on"
+                >Trang Chủ</a
+              >
             </li>
             <li>
-              <router-link to="/abilityDevelop">역량개발</router-link>
-              <ul class="gnb_2depth">
-                <li><router-link to="/learnTutoring">학습튜터링</router-link></li>
-                <li><router-link to="/learnSdl">학습SDL</router-link></li>
-                <li><router-link to="/volunteerApply">사회봉사 신청</router-link></li>
-                <li><router-link to="/individualVolunteer">개인참여 사회봉사 등록</router-link></li>
-              </ul>
+              <a
+                href="#"
+                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
+                >Dịch Vụ</a
+              >
             </li>
             <li>
-              <router-link to="/community">커뮤니티</router-link>
-              <ul class="gnb_2depth">
-                <li><router-link to="/notice">공지사항</router-link></li>
-                <li><router-link to="/qna">Q&A</router-link></li>
-                <li><router-link to="/alarmTalk">알림톡</router-link></li>
-              </ul>
+              <a
+                href="#"
+                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
+                >Sản Phẩm</a
+              >
             </li>
             <li>
-              <router-link to="/mycertistate">나의 인증 현황</router-link>
-              <ul class="gnb_2depth">
-                <li><router-link to="/coreState">핵심역량 현황</router-link></li>
-                <li><router-link to="/majorState">전공능력 현황</router-link></li>
-              </ul>
+              <a
+                href="#"
+                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
+                >Giới Thiệu</a
+              >
             </li>
-            <li><router-link to="/trackEdu">트랙교육과정 이수현황</router-link></li>
+            <li>
+              <a
+                href="#"
+                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
+                >Liên Hệ</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
-    </div>
-    <!-- 모바일 메뉴 -->
-    <div class="gnb_submenu">
-      <div class="grid_content">
-        <nav class="nav_wrap">
-          <ul class="sub_1depth">
-            <li><router-link to="/portfolio">포트폴리오</router-link></li>
-            <li><router-link to="/abilityDiagram">역량체계도 소개</router-link></li>
-            <li>
-              <a href="javascript:void(0);">진단</a>
-              <ul class="sub_2depth">
-                <li><router-link to="/diag/coreAbility">핵심역량진단</router-link></li>
-                <li><router-link to="/diag/majorAbility">전공능력진단</router-link></li>
-                <li><router-link to="/diag/learnAbility">학습역량진단</router-link></li>
-                <li><router-link to="/diag/basicAbility">기초학력진단</router-link></li>
-                <li><router-link to="/diag/sltTest">SLT 자기조절학습 검사</router-link></li>
-                <li><router-link to="/diag/catTest">CAT 대학적응력 검사</router-link></li>
-                <li><router-link to="">만족도 조사</router-link></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:void(0);">역량개발</a>
-              <ul class="sub_2depth">
-                <li><router-link to="/learnTutoring">학습튜터링</router-link></li>
-                <li><router-link to="/learnSdl">학습SDL</router-link></li>
-                <li><router-link to="/volunteerApply">사회봉사 신청</router-link></li>
-                <li><router-link to="/individualVolunteer">개인참여 사회봉사 등록</router-link></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:void(0);">커뮤니티</a>
-              <ul class="sub_2depth">
-                <li><router-link to="/notice">공지사항</router-link></li>
-                <li><router-link to="/qna">Q&A</router-link></li>
-                <li><router-link to="/alarmTalk">알림톡</router-link></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:void(0);">나의 인증 현황</a>
-              <ul class="sub_2depth">
-                <li><router-link to="/coreState">핵심역량 현황</router-link></li>
-                <li><router-link to="/majorState">전공능력 현황</router-link></li>
-              </ul>
-            </li>
-            <li><router-link to="/trackEdu">트랙교육과정 이수현황</router-link></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sub_footer">
-        <div class="grid_content"></div>
+      <div>
+        <button
+          class="button btn_md bg-[--base-color-3] !rounded-full text-white mx-2"
+        >
+          Download
+        </button>
+        <button class="button btn_md btn_white bo_rd6 mx-2">Đăng ký</button>
+        <button class="btn_round bg-[--base-color-2] btn_md text-white">
+          Đăng nhập
+        </button>
       </div>
     </div>
-    <!-- 모바일 메뉴 -->
-  </div>
+  </header>
 </template>
 
 <script lang="ts">
-import { headerStyle, mobileGnb, gnbOneDepth } from "@/assets/js/common";
-import {removeUserInfo} from "@/utils/storage";
-import commonService from "@/service/common/CommonService";
+import facebookIcon from '@/assets/images/icon/facebook.png'
+import instaIcon from '@/assets/images/icon/insta.png'
+import youtubeIcon from '@/assets/images/icon/youtube.png'
+import tiktokIcon from '@/assets/images/icon/tiktok.png'
+import callIcon from '@/assets/images/icon/call.png'
+
+
 export default {
-  mounted: function () {
-    headerStyle();
-    mobileGnb();
-    gnbOneDepth();
-  },
   setup(){
-    const route = useRoute()
-    const router = useRouter()
+    const faIcon = facebookIcon;
+    const insIcon = instaIcon;
+    const youIcon = youtubeIcon;
+    const tikIcon = tiktokIcon;
+    const phongIcon = callIcon;
+    // const route = useRoute()
+    // const router = useRouter()
 
-    const isLoading = ref(false)
+    // const isLoading = ref(false)
 
-    const logout = () => {
-      isLoading.value = true
-      commonService
-          .logout()
-          .then(async (response) => {
-            if (response.status == 200) {
-              await removeUserInfo()
-              await router.push({name: "Login"})
-            }
-          })
-          .catch((e) => {
-            console.log(e)
-          })
-          .finally(() => {
-            isLoading.value = false
-          })
-    }
+    // const logout = () => {
+    //   isLoading.value = true
+    //   commonService
+    //       .logout()
+    //       .then(async (response) => {
+    //         if (response.status == 200) {
+    //           await removeUserInfo()
+    //           await router.push({name: "Login"})
+    //         }
+    //       })
+    //       .catch((e) => {
+    //         console.log(e)
+    //       })
+    //       .finally(() => {
+    //         isLoading.value = false
+    //       })
+    // }
     return {
-      logout
+      faIcon,
+      insIcon,
+      phongIcon,
+      tikIcon,
+      youIcon
     }
   }
 };
 </script>
+<style>
+.input_search {
+  background-color: rgb(127, 167, 158);
+  height: 27px;
+  border-radius: 9999px !important;
+}
+.btn_search_input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 9px;
+}
+.icon_infor {
+  margin: 0 7px;
+}
+.text-menu.on {
+    color: var(--base-color-3) !important;
+}</style>

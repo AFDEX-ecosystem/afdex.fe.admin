@@ -12,7 +12,7 @@ export const routes = [
     component: () => import('@/layouts/DefaultLayout.vue'),
     meta: {
       title: 'Layout',
-      middleware: [authMiddleware],
+      // middleware: [authMiddleware],
     },
     children: [
       {
@@ -58,9 +58,10 @@ export const routes = [
     component: getView('TemplateUiYeongsang'),
   },
   {
-    path: SCREEN.portfolio.path,
-    name: SCREEN.portfolio.name,
-    component: () => import('@/views/portfolio/index.vue'),
+    path: '/layout',
+    name: 'layout',
+    meta: { title: 'TemplateUi Yeongsang' },
+    component: getView('LayoutTemplate'),
   },
   // {
   //   path: '/template-base',

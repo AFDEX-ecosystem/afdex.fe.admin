@@ -2,6 +2,14 @@
 
 /* variable color */
 :root {
+    --base-color-1: #01503F;
+    --base-color-2: #A02D33;
+    --base-color-3: #EA1C24;
+    --base-color-4: #E6E1FA;
+    --base-color-5: #D8F5EA;
+    --base-color-6: #6907A6;
+    --base-color-7: #589780;
+    --base-color-8: rgb(248, 172, 64);
     --black-color: #000;
     --white-color: #fff;
     --border-color: #edeff2;

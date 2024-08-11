@@ -383,7 +383,24 @@ html:has(body.on) {
 }
 
 /* footer */
-.footer_wrap {
+#footer {
+  background: url(@/assets/images/background/back.png) no-repeat;
+  background-size: cover;
+  padding: 83px 0 100px 0;
+}
+#footer .title span {
+  font-size: 18px;
+}
+#footer .title_info span {
+  font-size: 16px;
+}
+#footer .title_info div,#footer .title_info li {
+  line-height: 3;
+}
+#footer .footer_info_left {
+  color: var(--base-color-8);
+}
+/* .footer_wrap {
   display: flex;
   margin-top: 60px;
   height: 50px;
@@ -395,7 +412,7 @@ html:has(body.on) {
 }
 .footer_wrap .copyright strong {
   font-weight: 600; vertical-align: 0;
-}
+} */
 .move_top {
   position: fixed; right: 40px; bottom: -200px; z-index: 900;
   padding: 32px 0 0;

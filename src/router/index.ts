@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from '@/router/routes'
-import routes_pub from "@/router/routes_pub";
 
-const route = [...routes,...routes_pub]
+const route = [...routes]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
