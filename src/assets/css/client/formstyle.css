@@ -188,6 +188,11 @@ body.swal2-toast-shown .swal2-container:has(.custom_toast) {
   background-color: var(--white);
   border: 1px solid var(--light3);
 }
+.btn_red {
+  font-weight: 500;
+  background-color: var(--base-color-2);
+  border: 1px solid var(--light3);
+}
 .btn_white.btn_icon {
   background-color: var(--white);
 }
@@ -1079,7 +1084,7 @@ body.swal2-toast-shown .swal2-container:has(.custom_toast) {
   margin-bottom: 17px;
   padding: 0 32px;
   background-color: var(--white);
-  box-shadow: 0 2px 4px rgba(34,34,34, 0.08);
+  /* box-shadow: 0 2px 4px rgba(34,34,34, 0.08); */
   border-radius: 14px;
 }
 .search_section {

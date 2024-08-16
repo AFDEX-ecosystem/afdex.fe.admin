@@ -34,6 +34,11 @@ export const routes = [
         name: 'map',
         component: () => import('@/views/mapView/VietNamMap.vue'),
       },
+      {
+        path: SCREEN.contact.path,
+        name: SCREEN.contact.name,
+        component: () => import ('../views/contact/Contact.vue'),
+      },
     ],
   },
   {
