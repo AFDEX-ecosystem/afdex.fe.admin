@@ -31,28 +31,35 @@
 
   .bg_map_red {
     fill: rgb(238 25 36);
+    background-color: rgb(238 25 36);
   }
 
   .bg_map_orange {
     fill: rgb(243 129 33);
+    background-color: rgb(243 129 33);
   }
 
   .bg_map_gree {
     fill: rgb(7 169 86);
+    background-color: rgb(7 169 86);
   }
 
   .bg_map_blue {
     fill: rgb(10 121 200);
+    background-color: rgb(10 121 200);
   }
 
   .bg_map_pink {
     fill: rgb(235 6 138);
+    background-color: rgb(235 6 138);
   }
 
   .bg_map_yellow {
     fill: rgb(224 223 34);
+    background-color: rgb(224 223 34);
   }
 
   .bg_map_grass_gree {
     fill: rgb(166 213 64);
+    background-color: rgb(166 213 64);
   }

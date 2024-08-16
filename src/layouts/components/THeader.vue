@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="sticky top-0 z-50">
     <div
       class="top_header h-[43px] bg-[--base-color-1] flex items-center justify-around"
     >
@@ -47,7 +47,7 @@
       <div class="right_head">Việt nam</div>
     </div>
     <div
-      class="bottom_header h-[110px] flex items-center bg-white justify-around"
+      class="bottom_header shadow-lg h-[110px] flex items-center bg-white justify-around"
     >
       <div class="h-[80%] flex items-center">
         <div class="h-[80%] mr-5">

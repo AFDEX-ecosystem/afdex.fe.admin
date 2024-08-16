@@ -31,7 +31,7 @@ export const routes = [
       },
       {
         path: '/map',
-        name: 'layout',
+        name: 'map',
         component: () => import('@/views/mapView/VietNamMap.vue'),
       },
     ],

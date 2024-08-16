@@ -4,7 +4,7 @@
       <div class="h-[800px] w-full relative">
         <img
           class="w-full h-full"
-          src="https://media.discordapp.net/attachments/1267361301944995955/1272236562683531296/vegetable-farmer-arranging-freshly-picked-produce-into-crates-organic-farm.jpg?ex=66ba3e21&is=66b8eca1&hm=1655a545fa2b18507910b47df1ded2ae6252b834ac5eecc2265544ad5a821bad&=&format=webp&width=1181&height=662"
+          :src="bg"
           alt=""
         />
         <div class="content_page z-30 absolute top-24 text-white w-full">
@@ -65,7 +65,14 @@
   </div>
 </template>
 <script lang="ts">
-export default defineComponent({});
+import bg from '@/assets/images/background/vegetable-farmer-arranging-freshly-picked-produce-into-crates-organic-farm.jpg'
+export default defineComponent({
+  setup() {
+    return {
+      bg
+    }
+  }
+});
 </script>
 
 <style></style>

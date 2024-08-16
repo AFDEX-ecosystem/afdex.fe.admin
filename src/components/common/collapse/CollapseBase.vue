@@ -1,12 +1,26 @@
 <template>
   <div
-      class="accordion"
-      :class="{acd_active:isShow}"
+    class="accordion"
+    :class="{ acd_active: isShow }"
   >
-    <p v-if="mode===MODE_SHOW()" class="acd_tit" @click.prevent="onClick">{{ title }}</p>
-    <p v-else class="acd_tit" :class="(isCheck ? 'on' : 'off')" @click.prevent="onClick">{{ title }}</p>
+    <p v-if="mode === MODE_SHOW()" class="acd_tit" @click.prevent="onClick">
+      {{ title }}
+      <span class="arrow-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </span>
+    </p>
+    <p v-else class="acd_tit" :class="(isCheck ? 'on' : 'off')" @click.prevent="onClick">
+      {{ title }}
+      <span class="arrow-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </span>
+    </p>
 
-    <div class="transition_group" :style="{maxHeight: isShow ? heightSlot : '0px'}">
+    <div class="transition_group" :style="{ maxHeight: isShow ? heightSlot : '0px' }">
       <div ref="transitionRef" class="transition_card">
         <slot></slot>
       </div>
@@ -63,6 +77,32 @@ export default {
 </script>
 
 <style>
+.arrow-icon svg {
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.arrow-icon svg {
+  transform-origin: center;
+}
+
+.arrow-icon svg {
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+  transform-origin: center; /* Xoay quanh trung tâm */
+  transform: rotate(-90deg); /* Quay sang phải khi ở trạng thái bình thường */
+}
+
+.acd_active .arrow-icon svg {
+  transform: rotate(0); /* Quay xuống dưới khi accordion mở */
+}
+.acd_tit {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .transition_group {
   max-height: 0;
   transition: max-height .3s ease-in-out;

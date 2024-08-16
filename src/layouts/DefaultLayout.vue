@@ -1,10 +1,10 @@
 <template>
   <!-- <Loading /> -->
   <div class="page_wrap">
-    <div class="skip_nav">
+    <!-- <div class="skip_nav">
       <a href="#gnb_skip">주요메뉴 바로가기</a>
       <a href="#container_skip">본문영역 바로가기</a>
-    </div>
+    </div> -->
     <!-- header -->
     <THeader/>
 
