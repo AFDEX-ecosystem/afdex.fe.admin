@@ -1,7 +1,6 @@
 /** CSS 파일 집합소 */
 
 /* Dain css 파일 */
-@import url('./client/normalize.css');
 @import url('./dl_global.css');
 @import url('./client/grid.css');
 @import url('./client/formstyle.css');
@@ -10,12 +9,5 @@
 @import url('./client/ui.css');
 @import url('./client/popup.css');
 @import url('./client/main.css');
-@import url('./client/diag.css');
-@import url('./client/community.css');
-@import url('./client/abilitydevelop.css');
-
-@import url('./client/mycertistate.css');
-@import url('./client/volunteer.css');
-@import url('./client/portfolio.css');
-@import url('./client/abilitydiagram.css');
+@import url('./client/map.css');
 /* @import url('./'); */

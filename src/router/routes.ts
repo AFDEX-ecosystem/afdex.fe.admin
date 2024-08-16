@@ -2,7 +2,7 @@ import { SCREEN } from './screen';
 import authMiddleware from '@/middleware/auth';
 import logMiddleware from '@/middleware/log'
 
-const getView = (path) => {
+const getView = (path:string) => {
   return () => import(`@/views/${path}.vue`);
 };
 
@@ -28,6 +28,11 @@ export const routes = [
         path: '',
         name: 'layout',
         component: getView('TestLayout'),
+      },
+      {
+        path: '/map',
+        name: 'layout',
+        component: () => import('@/views/mapView/VietNamMap.vue'),
       },
     ],
   },

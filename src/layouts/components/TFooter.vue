@@ -113,4 +113,7 @@ export default {
 #footer li {
   list-style: inside;
 }
+.grid_content>[class*=col] {
+  border: none;
+}
 </style>
