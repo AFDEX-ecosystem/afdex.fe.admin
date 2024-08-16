@@ -39,6 +39,11 @@ export const routes = [
         name: SCREEN.contact.name,
         component: () => import ('../views/contact/Contact.vue'),
       },
+      {
+        path: '/ecosystem',
+        name: 'ecosystem',
+        component: () => import('@/views/ecosystem/EcoSystem.vue'),
+      },
     ],
   },
   {
