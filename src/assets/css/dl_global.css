@@ -509,6 +509,7 @@
 .medium { font-weight: 500 !important; }
 .bold { font-weight: 600 !important; }
 .normal{ font-weight: 400 !important; }
+.bolder { font-weight: 700 !important; }
 .ellipsis { display: block; width: auto; overflow: hidden; white-space: nowrap; text-overflow: ellipsis !important; }
 .keep_all{ word-break: keep-all !important; }
 .break_all{ word-break: break-all !important; }

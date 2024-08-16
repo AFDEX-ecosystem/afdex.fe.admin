@@ -30,5 +30,9 @@ export const SCREEN = {
   portfolio:{
     path:'/portfolio/:idStd',
     name:'portfolio',
+  },
+  contact:{
+    path:'/contact',
+    name:'contact',
   }
 }
