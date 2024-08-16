@@ -10,6 +10,8 @@ import '../node_modules/ag-grid-community/styles/ag-theme-alpine.css'
 import VueSweetalert2 from 'vue-sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import "@/assets/style/_sweetaleart.scss";
+import { createVuetify } from 'vuetify';
+import 'vuetify/styles';
 import vuetify from '@/plugins/vuetify'
 
 import { i18n } from '@/plugins/i18n'
@@ -41,6 +43,7 @@ app.use(i18n)
 app.use(global);
 app.component('QuillEditor', QuillEditor)
 app.use(VueSweetalert2)
+app.use(createVuetify());
 app.use(vuetify)
 // app.component("VueSelect", VueSelect);
 app.mount('#app')

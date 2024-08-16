@@ -35,7 +35,29 @@
       </CollapseBase>
 
       <div class="box dp_block">
-        <div class="box_inner">
+        <h3 class="box_title">ToolTip Component</h3>
+        <TooltipComponent
+            :activator="'parent'"
+            :location="'right'"
+            :width="'300px'"
+          >
+            <template #activator>
+              <button type="button" class="button btn_md btn_white ">btn_md</button>
+            </template>
+            <template #tooltipContent>
+                 <span> Trước nhu cầu số hóa toàn cầu, việc mã hóa sản phẩm, mã hóa ơn
+                  hàng, mã hóa khách hàng, mã hóa chuyên gia, mã hóa vùng nguyên
+                  liệu… là yếu tố quan trọng nhất trong công cuộc “chuyển ổi số nông
+                  nghiệp”. Công ty Cổ phần Hệ Sinh thái AFDEX (Gọi tắt là “Hệ Sinh
+                  thái AFDEX”) ra ời với mong muốn tiếp thu tiến bộ kỹ thuật trong
+                  sản xuất chế biến, nâng tầm văn hóa sản xuất, văn hóa tri ân trong
+                  giao dịch thương mại dịch vụ, nâng cao giá trị ặc trưng của sản
+                  phẩm vùng miền thông qua việc kế thừa thành quả ầu tư từ Cơ sở Dữ
+                  liệu trong “Niên giám Nông nghiệp Thực phẩm Việt Nam - 2010” của
+                  Công ty TNHH Phố Chợ.</span>
+            </template>
+          </TooltipComponent>
+        <div class="box_inner">   
           <h3 class="box_title">BOX TITLE</h3>
           <p>
             box 내에 영역 1개 일때
@@ -330,6 +352,7 @@
       </div>
         </div>
           <p class="box_title_sm">Button - size</p>
+          
           <div class="flex ga-2">
             <button type="button" class="button btn_xs btn_white ">btn_xs</button>
             <button type="button" class="button btn_sm btn_white ">btn_sm</button>
