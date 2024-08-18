@@ -24,8 +24,7 @@
         <v-row>
           <!-- Cột đầu tiên - Danh sách Tổng Mục -->
           <v-col cols="3">
-            <v-card>
-              <v-card-title>Danh sách Tổng Mục</v-card-title>
+            <v-card class="card-custom">
               <v-list>
                 <v-list-item
                   v-for="parent in parents"
@@ -40,18 +39,22 @@
           </v-col>
 
           <!-- Cột thứ hai - Danh sách Con của Tổng Mục với danh sách lồng nhau -->
-          <v-col cols="2" v-if="selectedParent">
-            <v-card>
-              <v-card-title>Mục con của {{ selectedParent.name }}</v-card-title>
+          <v-col cols="3" v-if="selectedParent">
+            <v-card class="card-col-2-custom">
               <v-list dense class="nested-list">
                 <ul class="parent-list">
                   <li
                     v-for="child in selectedParent.children"
                     :key="child.id"
-                    class="parent-item"
+                    :class="'parent-item'"
                   >
-                    {{ child.name }}
-                    <ul class="child-list mt-3">
+                    <span
+                      :class="
+                        child.type === 1 ? 'color-green-custom' : 'color-purple-custom'
+                      "
+                      >{{ child.name }}</span
+                    >
+                    <ul class="child-list">
                       <!-- Danh sách các mục nhỏ hơn (depth 3) -->
                       <li
                         v-for="grandchild in child.children"
@@ -59,7 +62,15 @@
                         class="grandchild-item"
                         @click="selectGrandchild(grandchild)"
                       >
-                        {{ grandchild.name }}
+                        <span
+                          :class="
+                            child.type === 1
+                              ? 'color-green-custom'
+                              : 'color-purple-custom'
+                          "
+                        >
+                          {{ " - " + grandchild.name }}</span
+                        >
                       </li>
                     </ul>
                   </li>
@@ -70,8 +81,10 @@
 
           <!-- Cột thứ ba - Chi tiết của Grandchild -->
           <v-col cols="6" v-if="selectedGrandchild">
-            <v-card>
-              <v-card-title>Chi tiết của {{ selectedGrandchild.name }}</v-card-title>
+            <v-card class="card-6-custom">
+              <v-card-title style="text-align: center"
+                >Chi tiết của {{ selectedGrandchild.name }}</v-card-title
+              >
               <v-card-subtitle v-if="selectedGrandchild.description">
                 <div class="description-text">
                   {{ selectedGrandchild.description }}
@@ -93,11 +106,12 @@ export default {
       parents: [
         {
           id: 1,
-          name: "TỔNG CT.QLC NN12. CÂY TRỒNG",
+          name: "+ TỔNG CT.QLC NN12. CÂY TRỒNG",
           children: [
             {
               id: 11,
-              name: "TỔNG QTSP NN12.CÂY TRỒNG",
+              name: "+ TỔNG QTSP NN12.CÂY TRỒNG",
+              type: 0,
               children: [
                 {
                   id: 111,
@@ -121,7 +135,52 @@ export default {
             },
             {
               id: 12,
-              name: "LIÊN DOANH (DV1 - TCBH)",
+              name: "+ LIÊN DOANH (DV1 - TCBH)",
+              type: 1,
+              children: [
+                {
+                  id: 121,
+                  name: "BQL.DV 524/631 CBBQ",
+                  description: "Mô tả của BQL.DV 524/631 CBBQ",
+                },
+                {
+                  id: 122,
+                  name: "BQL.DV 524/631 TMDV",
+                  description: "Mô tả của BQL.DV 524/631 TMDV",
+                },
+                {
+                  id: 123,
+                  name: "BQL.DV 524/631 NNST",
+                  description: "Mô tả của BQL.DV 524/631 NNST",
+                },
+              ],
+            },
+            {
+              id: 13,
+              name: "+ LIÊN DOANH (DV2 - ĐTTH)",
+              type: 1,
+              children: [
+                {
+                  id: 121,
+                  name: "BQL.DV 524/631 CBBQ",
+                  description: "Mô tả của BQL.DV 524/631 CBBQ",
+                },
+                {
+                  id: 122,
+                  name: "BQL.DV 524/631 TMDV",
+                  description: "Mô tả của BQL.DV 524/631 TMDV",
+                },
+                {
+                  id: 123,
+                  name: "BQL.DV 524/631 NNST",
+                  description: "Mô tả của BQL.DV 524/631 NNST",
+                },
+              ],
+            },
+            {
+              id: 14,
+              name: "+ LIÊN DOANH (DV1 - TCBH)",
+              type: 1,
               children: [
                 {
                   id: 121,
@@ -141,6 +200,21 @@ export default {
               ],
             },
           ],
+        },
+        {
+          id: 2,
+          name: "+ TỔNG CT.QLC NN34. VẬT NUÔI",
+          children: [],
+        },
+        {
+          id: 3,
+          name: "+ TỔNG CT.QLC NN5. LÀNG NGHỀ",
+          children: [],
+        },
+        {
+          id: 4,
+          name: "+ TỔNG CT.QLC NN6. NAM DƯỢC",
+          children: [],
         },
       ],
       selectedParent: null,
@@ -194,12 +268,34 @@ export default {
 }
 
 .content-ecosystem {
-  padding-left: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+v-list {
+  padding: 0 !important;
+  height: 500px !important;
 }
 
 .list-item {
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  background-color: rgb(151, 4, 151);
+  align-items: center;
+  justify-content: right;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card-custom {
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  color: white;
+  min-height: 650px;
 }
 
 .list-item:hover {
@@ -212,11 +308,13 @@ export default {
 
 .parent-item {
   position: relative;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 4px;
   margin-bottom: 5px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: bold;
 }
 
 .parent-item:hover {
@@ -229,7 +327,7 @@ export default {
 }
 
 .grandchild-item {
-  padding: 8px 15px;
+  padding: 5px 15px;
   border-radius: 4px;
   margin-bottom: 5px;
   transition: background-color 0.3s;
@@ -242,13 +340,37 @@ li {
   position: relative;
   padding-left: 20px;
 }
+
 .description-text {
-  white-space: pre-wrap; /* Giữ lại các khoảng trắng và cho phép xuống dòng */
-  word-break: break-word; /* Đảm bảo từ dài không tràn ra ngoài */
-  padding: 10px; /* Thêm khoảng cách xung quanh nội dung */
-  background-color: #f9f9f9; /* Màu nền nhạt cho phần mô tả */
-  border-radius: 4px; /* Bo tròn các góc của khối mô tả */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng cho mô tả */
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 10px;
+  background-color: rgb(227, 206, 248);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 16px;
+  color: black;
+  font-weight: 500;
+}
+
+.card-col-2-custom {
+  background-color: rgb(227, 206, 248);
+}
+
+.nested-list {
+  background-color: rgb(227, 206, 248);
+  padding: 0 !important;
+}
+
+.color-green-custom {
+  color: rgba(3, 202, 3, 0.968) !important;
+}
+
+.color-purple-custom {
+  color: blueviolet !important;
+}
+
+.card-6-custom {
+  background-color: rgb(227, 206, 248);
 }
 </style>
