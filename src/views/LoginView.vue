@@ -30,7 +30,7 @@
     </div>
     <p class="login_tip">
       <!-- Tổng ài hỗ trợ: 19001900 <br/>
- Hỗ trợ khách hàng các ngày trong tuần <br/> từ Thứ Hai ến Chủ nhật <br/>
+ Hỗ trợ khách hàng các ngày trong tuần <br/> từ Thứ Hai đến Chủ nhật <br/>
  (từ 07h00 - 22h hàng ngày) -->
     </p>
   </div>

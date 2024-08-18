@@ -24,7 +24,7 @@
             <InputBase id="input_constitutiveFactor" placeholder="Mã bảo vệ" />
             <textarea
               id="input_constitutiveFactor"
-              placeholder="Nội dung kiên hệ"
+              placeholder="Nội dung liên hệ"
               class="size"
             />
           </div>
