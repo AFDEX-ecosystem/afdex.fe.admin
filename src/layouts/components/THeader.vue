@@ -1,26 +1,22 @@
 <template>
   <header class="sticky top-0 z-50">
-    <div
-      class="top_header h-[43px] bg-[--base-color-1] flex items-center justify-around"
-    >
+    <div class="top_header h-[43px] bg-[--base-color-1] flex items-center justify-around">
       <div class="left_header w-[90%]">
         <div class="flex justify-between items-center mx-[60px]">
           <div class="text-white">
-            <span class="flex items-center"> <img class="h-[18px] mr-2" :src="phongIcon"/> 032.884.3156 </span>
+            <span class="flex items-center">
+              <img class="h-[18px] mr-2" :src="phongIcon" /> 032.884.3156
+            </span>
           </div>
           <div class="flex justify-around items-center">
             <div class="icon_custom flex">
-              <img class="icon_infor h-[28px]" :src="faIcon"/>
-              <img class="icon_infor h-[28px]" :src="insIcon"/>
-              <img class="icon_infor h-[28px]" :src="tikIcon"/>
-              <img class="icon_infor h-[28px]" :src="youIcon"/>
+              <img class="icon_infor h-[28px]" :src="faIcon" />
+              <img class="icon_infor h-[28px]" :src="insIcon" />
+              <img class="icon_infor h-[28px]" :src="tikIcon" />
+              <img class="icon_infor h-[28px]" :src="youIcon" />
             </div>
             <div class="search relative">
-              <input
-                id="input_search"
-                class="input_search pl-6"
-                placeholder="Tìm kiếm"
-              />
+              <input id="input_search" class="input_search pl-6" placeholder="Tìm kiếm" />
               <label for="input_search" class="btn_search_input">
                 <svg
                   enable-background="new 0 0 32 32"
@@ -59,68 +55,68 @@
         <nav>
           <ul class="flex justify-center space-x-8">
             <li>
-              <a
-                href="#"
-                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out on"
-                >Trang Chủ</a
+              <router-link
+                to="/"
+                class="text-menu text-black font-semibold text-2xl hover:!text-[--base-color-3] transition duration-300 ease-in-out"
+                active-class="!text-[--base-color-3]"
+                >Giới thiệu</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
-                >Dịch Vụ</a
+              <router-link
+                to="/ecosystem"
+                class="text-menu text-black font-semibold text-2xl hover:!text-[--base-color-3] transition duration-300 ease-in-out"
+                active-class="!text-[--base-color-3]"
+                >Hệ sinh thái</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
-                >Sản Phẩm</a
+              <router-link
+                to="/market"
+                class="text-menu text-black font-semibold text-2xl hover:!text-[--base-color-3] transition duration-300 ease-in-out"
+                active-class="!text-[--base-color-3]"
+                >Phố chợ AFDEX</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
-                >Giới Thiệu</a
+              <router-link
+                to="/map"
+                class="text-menu text-black font-semibold text-2xl hover:!text-[--base-color-3] transition duration-300 ease-in-out"
+                active-class="!text-[--base-color-3]"
+                >Bản đồ AFDEX</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="text-menu text-black font-semibold text-3xl hover:!text-[--base-color-3] active:!text-[--base-color-3] transition duration-300 ease-in-out"
-                >Liên Hệ</a
+              <router-link
+                to="/contact"
+                class="text-menu text-black font-semibold text-2xl hover:!text-[--base-color-3] transition duration-300 ease-in-out"
+                active-class="!text-[--base-color-3]"
+                >Liên Hệ</router-link
               >
             </li>
           </ul>
         </nav>
       </div>
       <div>
-        <button
-          class="button btn_md bg-[--base-color-3] !rounded-full text-white mx-2"
-        >
+        <button class="button btn_md bg-[--base-color-3] !rounded-full text-white mx-2">
           Download
         </button>
         <button class="button btn_md btn_white bo_rd6 mx-2">Đăng ký</button>
-        <button class="btn_round bg-[--base-color-2] btn_md text-white">
-          Đăng nhập
-        </button>
+        <button class="btn_round bg-[--base-color-2] btn_md text-white">Đăng nhập</button>
       </div>
     </div>
   </header>
 </template>
 
 <script lang="ts">
-import facebookIcon from '@/assets/images/icon/facebook.png'
-import instaIcon from '@/assets/images/icon/insta.png'
-import youtubeIcon from '@/assets/images/icon/youtube.png'
-import tiktokIcon from '@/assets/images/icon/tiktok.png'
-import callIcon from '@/assets/images/icon/call.png'
-
+import facebookIcon from "@/assets/images/icon/facebook.png";
+import instaIcon from "@/assets/images/icon/insta.png";
+import youtubeIcon from "@/assets/images/icon/youtube.png";
+import tiktokIcon from "@/assets/images/icon/tiktok.png";
+import callIcon from "@/assets/images/icon/call.png";
 
 export default {
-  setup(){
+  setup() {
     const faIcon = facebookIcon;
     const insIcon = instaIcon;
     const youIcon = youtubeIcon;
@@ -153,9 +149,9 @@ export default {
       insIcon,
       phongIcon,
       tikIcon,
-      youIcon
-    }
-  }
+      youIcon,
+    };
+  },
 };
 </script>
 <style>
@@ -164,6 +160,7 @@ export default {
   height: 27px;
   border-radius: 9999px !important;
 }
+
 .btn_search_input {
   position: absolute;
   right: 0;
@@ -173,9 +170,12 @@ export default {
   align-items: center;
   margin-right: 9px;
 }
+
 .icon_infor {
   margin: 0 7px;
 }
+
 .text-menu.on {
-    color: var(--base-color-3) !important;
-}</style>
+  color: var(--base-color-3) !important;
+}
+</style>
